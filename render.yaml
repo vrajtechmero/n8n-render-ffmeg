@@ -11,7 +11,7 @@ services:
       - key: DB_POSTGRESDB_HOST
         value: aws-0-eu-central-1.pooler.supabase.com
       - key: DB_POSTGRESDB_PORT
-        value: 6543
+        value: "6543"
       - key: DB_POSTGRESDB_DATABASE
         value: postgres
       - key: DB_POSTGRESDB_USER
@@ -20,6 +20,8 @@ services:
         value: 123!@qweQASD
       - key: DB_POSTGRESDB_SCHEMA
         value: public
+      - key: DB_POSTGRESDB_SSL
+        value: "true"
       - key: DB_POSTGRESDB_POOL_SIZE
         value: "2"
       - key: DB_POSTGRESDB_ACQUIRE_CONNECTION_TIMEOUT
