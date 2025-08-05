@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: n8n
+    name: n8n-render-ffmeg
     env: docker
     region: oregon
     plan: starter
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: DB_TYPE
         value: postgresdb
@@ -19,19 +20,29 @@ services:
         value: 123!@qweQASD
       - key: DB_POSTGRESDB_SCHEMA
         value: public
+      - key: DB_POSTGRESDB_POOL_SIZE
+        value: "2"
+      - key: DB_POSTGRESDB_ACQUIRE_CONNECTION_TIMEOUT
+        value: "60000"
       - key: N8N_PORT
-        value: 443
+        value: 10000
       - key: N8N_HOST
-        value: n8n-latest-ug73.onrender.com
+        value: n8n-render-ffmeg.onrender.com
       - key: WEBHOOK_URL
-        value: https://n8n-latest-ug73.onrender.com
+        value: https://n8n-render-ffmeg.onrender.com
       - key: N8N_EDITOR_BASE_URL
-        value: https://n8n-latest-ug73.onrender.com
+        value: https://n8n-render-ffmeg.onrender.com
       - key: N8N_ENCRYPTION_KEY
         value: ZYwTyoHyL4K5iKqvQfNZq2nNNRYK0IqmRUUaxbZ
       - key: N8N_PROTOCOL
         value: https
       - key: N8N_TRUST_PROXY
-        value: true
-      - key: TZ
+        value: "true"
+      - key: N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS
+        value: "false"
+      - key: N8N_LOG_LEVEL
+        value: info
+      - key: NODE_ENV
+        value: production
+      - key: GENERIC_TIMEZONE
         value: Asia/Kolkata
