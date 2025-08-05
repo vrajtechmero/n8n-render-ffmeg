@@ -17,7 +17,7 @@ services:
       - key: DB_POSTGRESDB_USER
         value: postgres.fpaspkrlwethghmzxdrn
       - key: DB_POSTGRESDB_PASSWORD
-        value: 123!@qweQASD
+        value: "123!@qweQASD"
       - key: DB_POSTGRESDB_SCHEMA
         value: public
       - key: DB_POSTGRESDB_SSL
@@ -27,7 +27,7 @@ services:
       - key: DB_POSTGRESDB_ACQUIRE_CONNECTION_TIMEOUT
         value: "60000"
       - key: N8N_PORT
-        value: 10000
+        value: "10000"
       - key: N8N_HOST
         value: n8n-render-ffmeg.onrender.com
       - key: WEBHOOK_URL
