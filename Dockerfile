@@ -15,8 +15,12 @@ COPY --chown=node:node <<EOF /home/node/debug-env.sh
 #!/bin/sh
 echo "=== Environment Variables Debug ==="
 echo "DB_TYPE: \$DB_TYPE"
-echo "DB_POSTGRESDB_CONNECTION_URL: \$DB_POSTGRESDB_CONNECTION_URL"
+echo "DB_POSTGRESDB_HOST: \$DB_POSTGRESDB_HOST"
+echo "DB_POSTGRESDB_PORT: \$DB_POSTGRESDB_PORT"
+echo "DB_POSTGRESDB_USER: \$DB_POSTGRESDB_USER"
+echo "DB_POSTGRESDB_SSL: \$DB_POSTGRESDB_SSL"
 echo "N8N_PORT: \$N8N_PORT"
+echo "PORT: \$PORT"
 echo "=================================="
 exec "\$@"
 EOF
